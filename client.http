@@ -1,0 +1,49 @@
+# Rest Client extension
+
+# Variables
+@baseUrl = http://127.0.0.1:3000
+@movieId = 1
+
+###
+
+# Create movie
+# @name createMovie
+POST {{baseUrl}}/movies
+Content-Type: application/json
+
+{
+  "title": "Broker - Intermediários",
+  "genre": "Drama",
+  "year": "2022"
+}
+
+###
+
+# Get movies
+# @name getMovies
+GET {{baseUrl}}/movies
+
+###
+
+# Get movies by ID
+# @name getMovies
+GET {{baseUrl}}/movies/{{movieId}}
+
+###
+
+# Update movie
+# @name UpdateMovie
+PUT {{baseUrl}}/movies/{{movieId}}
+Content-Type: application/json
+
+{
+  "title": "Dream - Campeonato dos Sonhos",
+  "genre": "Sport/Comédia",
+  "year": "2023"
+}
+
+###
+
+# Delete  movie
+# @name DeleteMovie
+DELETE {{baseUrl}}/movies/{{movieId}}
